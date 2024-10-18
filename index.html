@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Prank</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    p {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: text;
+    }
+  </style>
+</head>
+<body>
+  <p id="copyText">Copy this text</p>
+
+  <script>
+    const textElement = document.getElementById('copyText');
+
+    textElement.addEventListener('copy', (event) => {
+      event.preventDefault(); 
+      event.clipboardData.setData('text/plain', "it's pranks");
+    });
+  </script>
+</body>
+</html>
